@@ -1,19 +1,19 @@
-const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCSSEctractPlugin = require("mini-css-extract-plugin");
-const CSSMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCSSEctractPlugin = require('mini-css-extract-plugin');
+const CSSMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === "development";
-const isProd = process.env.NODE_ENV === "production";
-console.log("Is DEV: ", isDev);
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = process.env.NODE_ENV === 'production';
+// console.log('Is DEV: ', isDev);
 
 const optimization = () => {
   const config = {
     splitChunks: {
-      chunks: "all",
+      chunks: 'all',
     },
   };
 
@@ -29,7 +29,7 @@ const cssLoaders = (extra) => {
       loader: MiniCSSEctractPlugin.loader,
       options: {},
     },
-    "css-loader",
+    'css-loader',
   ];
 
   if (extra) {
@@ -41,8 +41,8 @@ const cssLoaders = (extra) => {
 
 const babelOptions = (preset) => {
   const options = {
-    presets: ["@babel/preset-env"],
-    plugins: ["@babel/plugin-proposal-class-properties"],
+    presets: ['@babel/preset-env'],
+    plugins: ['@babel/plugin-proposal-class-properties'],
   };
 
   if (preset) {
@@ -55,7 +55,7 @@ const babelOptions = (preset) => {
 const jsLoaders = () => {
   const loaders = [
     {
-      loader: "babel-loader",
+      loader: 'babel-loader',
       options: babelOptions(),
     },
   ];
@@ -64,25 +64,25 @@ const jsLoaders = () => {
 };
 
 module.exports = {
-  context: path.resolve(__dirname, "src"),
-  mode: "development",
+  context: path.resolve(__dirname, 'src'),
+  mode: 'development',
   entry: {
-    main: ["@babel/polyfill", "./pages/main/index.js"],
+    main: ['@babel/polyfill', './pages/main/index.js'],
   },
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: [".js", ".json"],
+    extensions: ['.js', '.json'],
     alias: {
-      images: path.resolve(__dirname, "src/assets/images/"),
+      images: path.resolve(__dirname, 'src/assets/images/'),
     },
   },
   optimization: optimization(),
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "./dist"),
+      directory: path.resolve(__dirname, './dist'),
     },
     compress: true,
     port: 8080,
@@ -91,21 +91,21 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: "./pages/main/index.html",
-      filename: "index.html",
-      chunks: ["main"],
+      template: './pages/main/index.html',
+      filename: 'index.html',
+      chunks: ['main'],
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "./src/assets/images/favicon.ico"),
-          to: path.resolve(__dirname, "dist/favicon.ico"),
+          from: path.resolve(__dirname, './src/assets/images/favicon.ico'),
+          to: path.resolve(__dirname, 'dist/favicon.ico'),
         },
       ],
     }),
     new MiniCSSEctractPlugin({
-      filename: "[name].css",
+      filename: '[name].css',
     }),
   ],
   module: {
@@ -116,15 +116,15 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/,
-        use: cssLoaders("sass-loader"),
+        use: cssLoaders('sass-loader'),
       },
       {
         test: /\.(jpg|png|svg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         test: /\.(ttf|woff|woff2|eof)$/,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         test: /\.m?js$/,

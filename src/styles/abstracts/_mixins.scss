@@ -1,0 +1,36 @@
+@mixin status($borderColor, $backgroundColor, $shading) {
+  position: absolute;
+  border-style: solid;
+  z-index: 2;
+  border-width: 1px;
+  border-color: $borderColor;
+  background-color: $backgroundColor;
+  width: 14px;
+  height: 14px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset -0.6px -1.9px 4px 0px $shading;
+  -moz-box-shadow: inset -0.6px -1.9px 4px 0px $shading;
+  box-shadow: inset -0.6px -1.9px 4px 0px $shading;
+}
+
+@mixin statusGlow($GlowColour) {
+  z-index: 1;
+  position: absolute;
+  background-color: #2f343a;
+  width: 14px;
+  height: 14px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 8px 1px $GlowColour;
+  -moz-box-shadow: 0px 0px 8px 1px $GlowColour;
+  box-shadow: 0px 0px 8px 1px $GlowColour;
+}

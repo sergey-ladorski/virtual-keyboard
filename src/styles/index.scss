@@ -4,3 +4,10 @@
 // abstract
 @import './abstracts/_variables';
 @import './abstracts/_mixins';
+
+
+@import './components/page.scss';
+@import './components/keyboard.scss';
+@import './components/keyboard__row.scss';
+@import './components/button.scss';
+@import './components/capsLock-on.scss';

@@ -1,0 +1,27 @@
+.keyboard__row {
+  display: flex;
+  gap: 5px;
+
+  .row__button {
+    width: 50px;
+  }
+  
+  .row__button#Tab {
+    width: 75px;
+  }
+
+  .row__button#Backspace,
+  .row__button#CapsLock,
+  .row__button#ShiftLeft {
+    width: 130px;
+  }
+
+  .row__button#Space {
+    width: 405px;
+  }
+
+  .row__button#Enter,
+  .row__button#ShiftRight {
+    width: 105px;
+  }
+}

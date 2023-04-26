@@ -1,0 +1,18 @@
+.capsLock-on {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 3px;
+    right: 3px;
+    @include status($green-border, $green, $green-shading);
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    right: 3px;
+    @include statusGlow($green-glow);
+  }
+}
