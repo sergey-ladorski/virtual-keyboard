@@ -9,7 +9,7 @@ export default class TextArea {
 
   start() {
     this.textArea = new CreateElement('textArea').create();
-    this.textArea.selector = this.selector;
+    this.textArea.className = this.selector;
     this.textArea.autofocus = true;
 
     this.updateCaretOnClick();
