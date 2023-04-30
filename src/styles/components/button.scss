@@ -1,52 +1,53 @@
 .button {
+  position: relative;
   width: 50px;
   height: 50px;
   font-size: 24px;
   cursor: pointer;
-  transition: all .1s ease;
-}
+  transition: all .3s ease;
 
-.button_type_function {
-  width: 50px;
-}
+  &_type_function {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
 
-.Delete {
-  width: 50px;
-}
+    width: 50px;
+    cursor: pointer;
+    transition: all .1s ease;
+  }
 
-.Backspace {
-  width: 140px;
+  &_active,
+  &:active,
+  &_type_function:active {
+    top: 2px;
+  }
+
+  &_active,
+  &:hover,
+  &_type_function:hover {
+    background: rgb(255, 225, 55);
+    color: rgb(0, 0, 0);
+  }
 }
 
 .Tab {
   width: 85px;
 }
 
-.CapsLock {
-  width: 140px;
-}
-.Enter {
-  width: 105px;
-}
-
+.Backspace,
+.CapsLock,
 .ShiftLeft {
   width: 140px;
 }
 
+.Enter,
 .ShiftRight {
   width: 105px;
 }
 
 .Space {
   width: 415px;
-}
-
-.active {
-  background: #6389cf;
-  border-radius: 20px;
-}
-
-.button:hover,
-.systemButton:hover {
-  background: #6389cf;
 }

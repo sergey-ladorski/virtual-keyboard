@@ -4,9 +4,9 @@ export default class ActiveButton {
     this.isReapeated = true;
   }
 
-  keyDown(elements) {
+  handleKeyDown(elements) {
     const buttons = [...elements];
-    this.keyUp(buttons);
+    this.handleKeyUp(buttons);
     document.addEventListener('keydown', (event) => {
       if (event.repeat !== undefined) {
         this.isReapeated = !event.repeat;
@@ -26,7 +26,7 @@ export default class ActiveButton {
     });
   }
 
-  keyUp(elements) {
+  handleKeyUp(elements) {
     document.addEventListener('keyup', (event) => {
       elements.forEach((button) => {
         if (button.code !== 'CapsLock' && button.code === event.code) {

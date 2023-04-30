@@ -1,6 +1,7 @@
 import CreateElement from './createElement';
 import TextArea from './textArea';
 import ActiveButton from './activeButton';
+import AnimateKey from './animateKey';
 import keyboardData from '../data/keyboardData';
 
 export default class ButtonList {
@@ -29,7 +30,7 @@ export default class ButtonList {
     this.activeButton = new ActiveButton(this.data.buttonList.active);
 
     this.addKeyToKeyboard(keyboardData);
-    this.activeButton.keyDown(this.elements);
+    this.activeButton.handleKeyDown(this.elements);
   }
 
   addKeyToKeyboard(array) {
@@ -50,6 +51,14 @@ export default class ButtonList {
 
       button.code = code;
 
+      button.addEventListener('click', () => {
+        if (!button.system) {
+          this.instanceOfTextarea.setValue(button.innerText);
+        } else {
+          this.textArea.focus();
+        }
+      });
+
       if (!localStorage.getItem('language')) {
         localStorage.setItem('language', 'en');
       } else {
@@ -60,5 +69,7 @@ export default class ButtonList {
 
       this.container.append(button);
     });
+
+    this.animateKey = new AnimateKey(this.elements, this.activeClassName);
   }
 }
