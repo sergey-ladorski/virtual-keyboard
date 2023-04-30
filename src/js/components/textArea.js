@@ -1,15 +1,15 @@
 import CreateElement from './createElement';
 
 export default class TextArea {
-  constructor(className) {
+  constructor(selector) {
     this.textArea = null;
-    this.className = className;
+    this.selector = selector;
     this.caretPosition = 0;
   }
 
   start() {
     this.textArea = new CreateElement('textArea').create();
-    this.textArea.className = this.className;
+    this.textArea.selector = this.selector;
     this.textArea.autofocus = true;
 
     this.updateCaretOnClick();

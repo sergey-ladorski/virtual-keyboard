@@ -96,7 +96,7 @@ const keyboardData = [
     keyRu: 'Backspace',
     keyRuShift: 'Backspace',
     code: 'Backspace',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'Tab',
@@ -104,7 +104,7 @@ const keyboardData = [
     keyRu: 'Tab',
     keyRuShift: 'Tab',
     code: 'Tab',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'q',
@@ -203,7 +203,7 @@ const keyboardData = [
     keyRu: 'Del',
     keyRuShift: 'Del',
     code: 'Delete',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'Caps Lock',
@@ -211,7 +211,7 @@ const keyboardData = [
     keyRu: 'Caps Lock',
     keyRuShift: 'Caps Lock',
     code: 'CapsLock',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'a',
@@ -296,7 +296,7 @@ const keyboardData = [
     keyRu: 'Enter',
     keyRuShift: 'Enter',
     code: 'Enter',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'Shift',
@@ -304,7 +304,7 @@ const keyboardData = [
     keyRu: 'Shift',
     keyRuShift: 'Shift',
     code: 'ShiftLeft',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'z',
@@ -389,7 +389,7 @@ const keyboardData = [
     keyRu: 'Shift',
     keyRuShift: 'Shift',
     code: 'ShiftRight',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'Ctrl',
@@ -397,7 +397,7 @@ const keyboardData = [
     keyRu: 'Ctrl',
     keyRuShift: 'Ctrl',
     code: 'ControlLeft',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'Win',
@@ -405,7 +405,7 @@ const keyboardData = [
     keyRu: 'Win',
     keyRuShift: 'Win',
     code: 'MetaLeft',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'Alt',
@@ -413,15 +413,15 @@ const keyboardData = [
     keyRu: 'Alt',
     keyRuShift: 'Alt',
     code: 'AltLeft',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: ' ',
-    keyEnShift: '',
-    keyRu: '',
-    keyRuShift: '',
+    keyEnShift: ' ',
+    keyRu: ' ',
+    keyRuShift: ' ',
     code: 'Space',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: 'Alt',
@@ -429,7 +429,7 @@ const keyboardData = [
     keyRu: 'Alt',
     keyRuShift: 'Alt',
     code: 'AltRight',
-    system: true,
+    functionType: true,
   },
   {
     keyEn: '←',
@@ -458,7 +458,7 @@ const keyboardData = [
     keyRu: 'Ctrl',
     keyRuShift: 'Ctrl',
     code: 'ControlRight',
-    system: true,
+    functionType: true,
   },
 ];
 export default keyboardData;
