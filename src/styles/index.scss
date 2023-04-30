@@ -1,0 +1,14 @@
+// vendor
+@import './base/normalize.css';
+@import '../assets/fonts/font.css';
+// abstract
+@import './abstracts/_variables';
+@import './abstracts/_mixins';
+
+// components
+@import './components/page.scss';
+@import './components/header.scss';
+@import './components/main.scss';
+@import './components/text-area.scss';
+@import './components/keyboard.scss';
+@import './components/button.scss';

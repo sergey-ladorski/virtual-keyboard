@@ -1,0 +1,14 @@
+.header {
+  width: 900px;
+  padding: 50px 0 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+
+  &__info {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
