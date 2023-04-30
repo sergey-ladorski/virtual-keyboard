@@ -5,9 +5,10 @@
 @import './abstracts/_variables';
 @import './abstracts/_mixins';
 
-
+// components
 @import './components/page.scss';
+@import './components/header.scss';
+@import './components/main.scss';
+@import './components/text-area.scss';
 @import './components/keyboard.scss';
-@import './components/keyboard__row.scss';
 @import './components/button.scss';
-@import './components/capsLock-on.scss';

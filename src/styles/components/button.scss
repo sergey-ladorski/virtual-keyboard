@@ -1,54 +1,52 @@
 .button {
-  position: relative;
-  padding: 0;
+  width: 50px;
   height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease;
-  border: 1px solid black;
-  border-radius: 5px;
-  background: rgba(220, 220, 220, 0.3);
+  font-size: 24px;
   cursor: pointer;
-  // box-shadow: 0 1px 1px 2px #efa424;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(34, 60, 80, 0.2);
-  box-shadow: 3px 3px 5px 0px rgba(34, 60, 80, 0.2);
-  transition: all ease 0.3s;
-  // }
+  transition: all .1s ease;
+}
 
+.button_type_function {
+  width: 50px;
+}
 
-  &_type_functional {
-    background: rgb(220, 220, 220);
-  }
+.Delete {
+  width: 50px;
+}
 
-  &:hover {
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.6);
-    -moz-box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.6);
-    box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.6);
-  }
+.Backspace {
+  width: 140px;
+}
 
-  &:active,
-  &_active {
-    // box-shadow: none;
-    -webkit-box-shadow: 3px 3px 5px 0px rgba(34, 60, 80, 0.2) inset;
-    -moz-box-shadow: 3px 3px 5px 0px rgba(34, 60, 80, 0.2) inset;
-    box-shadow: 3px 3px 5px 0px rgba(34, 60, 80, 0.2) inset;
-    top: 2px;
-    background: rgba(255, 217, 0, 0.7);
-  }
+.Tab {
+  width: 85px;
+}
 
+.CapsLock {
+  width: 140px;
+}
+.Enter {
+  width: 105px;
+}
 
-  .button__symbol {
-    margin: 0;
-    font-size: 20px;
-  }
+.ShiftLeft {
+  width: 140px;
+}
 
-  .button__symbol_shifted {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    margin: 0;
-    font-size: 14px;
-  }
+.ShiftRight {
+  width: 105px;
+}
+
+.Space {
+  width: 415px;
+}
+
+.active {
+  background: #6389cf;
+  border-radius: 20px;
+}
+
+.button:hover,
+.systemButton:hover {
+  background: #6389cf;
 }

@@ -1,6 +1,8 @@
-.page {
+.main {
+  max-width: 875px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   gap: 20px;
