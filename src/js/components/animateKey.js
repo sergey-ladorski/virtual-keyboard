@@ -6,15 +6,15 @@ export default class AnimateKey {
         if (button.code !== 'CapsLock') {
           button.classList.add(active);
         }
+
+        button.addEventListener('mouseleave', () => {
+          if (button.code !== 'CapsLock') {
+            button.classList.remove(active);
+          }
+        });
       });
 
       button.addEventListener('mouseup', () => {
-        if (button.code !== 'CapsLock') {
-          button.classList.remove(active);
-        }
-      });
-
-      button.addEventListener('mouseleave', () => {
         if (button.code !== 'CapsLock') {
           button.classList.remove(active);
         }
